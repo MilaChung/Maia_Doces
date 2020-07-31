@@ -22,7 +22,7 @@ const bolos = [
       {
         // "photo": "img/cenoura_choco.jpeg",
         "photo": "img/foto.jpeg",
-        "flavor": "cenoura",
+        "flavor": "cenoura_choco",
         "name": "bolo de cenoura com chocolate",
         "price": 14,
       },
@@ -35,7 +35,7 @@ const bolos = [
       },
       {
         "photo": "img/chocolate_cob.jpeg",
-        "flavor": "chocolate",
+        "flavor": "chocolate_cob",
         "name": "bolo de chocolate com cobertura",
         "price": 14,
       },
@@ -49,13 +49,13 @@ const bolos = [
       {
         // "photo": "img/fuba_coco.jpeg",
         "photo": "img/foto.jpeg",
-        "flavor": "fuba",
+        "flavor": "fuba_coco",
         "name": "bolo de fubá com coco",
         "price": 12,
       },
       {
         "photo": "img/fuba_goiaba.jpeg",
-        "flavor": "fuba",
+        "flavor": "fuba_goiaba",
         "name": "bolo de fubá com goiabada",
         "price": 14,
       },
@@ -68,7 +68,7 @@ const bolos = [
       {
         "photo": "img/limao.jpeg",
         "flavor": "limao",
-        "name": "bolo de limao",
+        "name": "bolo de limão",
         "price": 14,
       },
       {
@@ -93,26 +93,26 @@ const bolos = [
       }
   ];
 
-  //Returns the current window object (window.self or self)
-  self.bolos = bolos;
+//Returns the current window object (window.self or self)
+self.bolos = bolos;
 
-  //Initialing cakes page
-  $(document).ready(function(){
+//Initialing cakes page
+$(document).ready(function(){
     createItensAndAppendToList(self.bolos);
-  });
+});
 
-  //Function that select html element by id
-  function selectHtmlElementById(id) {
+//Function that select html element by id
+function selectHtmlElementById(id) {
     return document.querySelector(`#${id}`);
-  }
+}
 
-  //Function that create a html element
-  function createHtmlElement(element) {
+//Function that create a html element
+function createHtmlElement(element) {
     return document.createElement(element); 
-  }
+}
 
-  //Function that create an item of list
-  function createItem(item) {
+//Function that create an item of list
+function createItem(item) {
     let li = createHtmlElement('li');
     let img = createHtmlElement('img');
     let sectionf = createHtmlElement('section');
@@ -145,14 +145,55 @@ const bolos = [
     button.appendChild(btn);
     
     return li;
-  }
+}
 
-  //Function that create itens and append to list
-  function createItensAndAppendToList(bolos){
+//Function that create itens and append to list
+function createItensAndAppendToList(bolos){
     let ul = self.selectHtmlElementById('cards');
     
     bolos.map(bolos => {
       const li = self.createItem(bolos);
       ul.appendChild(li);
     })
+}
+
+//Function that construct the object by the filter, filtered object
+function constructFilterObj(filters) {
+    let newFilterObj = {};
+    filters.map(filter => {
+      for (var key in filter)
+        if (filter[key] == ""){
+          return;
+        }
+      return newFilterObj[key] = filter[key];
+    })
+  
+    return newFilterObj;
+  }
+  
+  //Function that filter the cake searched
+  function filterBolos(filtersObj) {
+    return self.bolos.filter((bolos) => {
+      for (var key in filtersObj) {
+        if (bolos[key] === undefined || bolos[key] != filtersObj[key])
+          return false;
+      }
+    
+      return true;
+    });
+  }
+  
+  //Function that when the button is clicked, filter the cakes
+  function buttonFilter () {
+    let filters = [
+      //{"flavor": selectHtmlElementById('validationDefault03').value},
+      {"flavor": selectHtmlElementById('validationDefault04').value},
+      // "price": selectHtmlElementByClass('price').value,
+    ];
+    
+    let filtersObj = constructFilterObj(filters);
+    let bolosFiltered = filterBolos(filtersObj);
+  
+    $("#cards").empty();
+    createItensAndAppendToList(bolosFiltered);
   }
