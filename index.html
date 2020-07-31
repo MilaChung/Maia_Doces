@@ -42,10 +42,71 @@
                 </ul>
               </div>
             </nav>
-          </header>
+        </header>
 
-          <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <main class="conteudo">    
+            <form class="searchForm" action="#">
+                <div class="form-row">
+                    <div class="col-4">
+                      <label class="label" for="validationDefault03">Bolos</label>
+                      <select id="validationDefault03" name="location" size="1"  class="form-control location"> 
+                        <option value="" selected disabled>Escolha um bolo</option>
+                        <option value="abacaxi">Abacaxi</option>
+                        <option value="banana">Banana</option>
+                        <option value="cenoura">Cenoura</option>
+                        <option value="chocolate">Chocolate</option>
+                        <option value="coco">Coco</option>
+                        <option value="fuba">Fubá</option>
+                        <option value="laranja">Laranja</option>
+                        <option value="limao">Limão</option>
+                        <option value="maca">Maçã</option>
+                        <option value="maracuja">Maracujá</option>                       
+                        <option value="milho">Milho</option>
+                                                                                                     
+                      </select>
+                    </div>
+                    <div class="col-4">
+                      <label class="label" for="validationDefault04">Sabores</label>
+                      <select id="validationDefault04" size="1"  class="form-control type"> 
+                        <option value="" selected disabled>Escolha um sabor</option>
+                        <option value="abacaxi">Abacaxi</option>
+                        <option value="banana">Banana</option>
+                        <option value="cenoura">Cenoura</option>
+                        <option value="cenoura_choco">Cenoura com chocolate</option>
+                        <option value="chocolate">Chocolate</option>
+                        <option value="chocolate_cob">Chocolate com cobertura</option>
+                        <option value="coco">Coco</option>
+                        <option value="fuba_coco">Fubá com coco</option>
+                        <option value="fuba_goiaba">Fubá com goiabada</option>
+                        <option value="laranja">Laranja</option>                        
+                        <option value="limao">Limão</option>
+                        <option value="maca">Maçã crocante</option>
+                        <option value="maracuja">Maracujá</option>                    
+                        <option value="milho">Milho cremoso</option>
+                                                                 
+                      </select>
+                    </div>
+                    <!-- <div class="col-3">
+                      <label for="validationDefault05">Preço</label>
+                      <select id="validationDefault05" size="1"  class="form-control price"> 
+                        <option value="" selected disabled>Escolha uma ordem</option>
+                        <option value="menor preco">Menor Preço</option>
+                        <option value="maior preco">Maior Preço</option>                                     
+                      </select>
+                    </div> -->
+                    <!-- <div class="col-4">
+                      <label for="validationDefault06">Quantidade</label>
+                      <input type="number" class="form-control guest" id="validationDefault06" min="1" max="5" placeholder="1 até 5">
+                    </div> -->
+                </div>
+  
+                <button class="button btn" type="button" onclick="buttonFilter()">Buscar</button>
+            </form>
+
+        </main>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     </body>
 </html>
