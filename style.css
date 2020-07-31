@@ -99,3 +99,61 @@ html, body {
     border-radius: 0.5rem;
     color: white;
 }
+
+#footer {
+    display: flex;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: rgba(118, 203, 203, 0.3);
+}
+
+.fab, .far {
+    font-weight: 400;
+    color: white;
+}
+
+.copyright {
+    display: flex;
+    position: relative;
+    left: 46%;
+    opacity: 0.7;
+    font-size: 80%;
+}
+
+.copyright p {
+    margin-top: 20%;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 1366px) {
+    .redesSociais {
+        display: flex;
+        position: relative;
+        left: 70%;
+    }  
+
+    .redes a { 
+        font-size: 200%;
+    }
+}
+
+@media screen and (min-width: 1367px) {
+    .redesSociais {
+        display: flex;
+        position: relative;
+        left: 80%;
+    }  
+
+    .redes a { 
+        font-size: 250%;
+    }
+}
+
+.redes {
+    margin: 5% 10%;
+    padding: 2%;
+}
