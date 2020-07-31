@@ -4,9 +4,93 @@ const bolos = [
       "photo": "img/abacaxi.jpeg",
       "flavor": "abacaxi",
       "name": "bolo de abacaxi",
-      "price": 433,
+      "price": 12,
     },
-    
+    {
+        "photo": "img/banana.jpeg",
+        "flavor": "banana",
+        "name": "bolo de banana",
+        "price": 12,
+      },
+    {
+        // "photo": "img/cenoura.jpeg",
+        "photo": "img/foto.jpeg",
+        "flavor": "cenoura",
+        "name": "bolo de cenoura",
+        "price": 12,
+      },
+      {
+        // "photo": "img/cenoura_choco.jpeg",
+        "photo": "img/foto.jpeg",
+        "flavor": "cenoura",
+        "name": "bolo de cenoura com chocolate",
+        "price": 14,
+      },
+      {
+        // "photo": "img/chocolate.jpeg",
+        "photo": "img/foto.jpeg",
+        "flavor": "chocolate",
+        "name": "bolo de chocolate",
+        "price": 12,
+      },
+      {
+        "photo": "img/chocolate_cob.jpeg",
+        "flavor": "chocolate",
+        "name": "bolo de chocolate com cobertura",
+        "price": 14,
+      },
+      {
+        // "photo": "img/coco.jpeg",
+        "photo": "img/foto.jpeg",
+        "flavor": "coco",
+        "name": "bolo de coco",
+        "price": 12,
+      },
+      {
+        // "photo": "img/fuba_coco.jpeg",
+        "photo": "img/foto.jpeg",
+        "flavor": "fuba",
+        "name": "bolo de fubá com coco",
+        "price": 12,
+      },
+      {
+        "photo": "img/fuba_goiaba.jpeg",
+        "flavor": "fuba",
+        "name": "bolo de fubá com goiabada",
+        "price": 14,
+      },
+      {
+        "photo": "img/laranja.jpeg",
+        "flavor": "laranja",
+        "name": "bolo de laranja",
+        "price": 12,
+      },
+      {
+        "photo": "img/limao.jpeg",
+        "flavor": "limao",
+        "name": "bolo de limao",
+        "price": 14,
+      },
+      {
+        // "photo": "img/maca.jpeg",
+        "photo": "img/foto.jpeg",
+        "flavor": "maca",
+        "name": "bolo de maçã crocante",
+        "price": 14,
+      },
+      {
+        "photo": "img/maracuja.jpeg",
+        "flavor": "maracuja",
+        "name": "bolo de maracujá",
+        "price": 14,
+      },
+      {
+        //"photo": "img/milho.jpeg",
+        "photo": "img/foto.jpeg",
+        "flavor": "milho",
+        "name": "bolo de milho cremoso",
+        "price": 16,
+      }
   ];
 
   //Returns the current window object (window.self or self)
@@ -38,7 +122,7 @@ const bolos = [
     let button = createHtmlElement('button');
   
     let type = document.createTextNode(`${item.name}`);
-    let price = document.createTextNode("R$ " + item.price);
+    let price = document.createTextNode("R$ " + item.price + ",00");
     let btn = document.createTextNode("Ver mais");
     
     $(li).attr("class", "cards-item");
