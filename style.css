@@ -204,7 +204,6 @@ html, body {
 }
 
 #footer {
-    display: flex;
     bottom: 0;
     left: 0;
     right: 0;
@@ -218,48 +217,27 @@ html, body {
     color: white;
 }
 
-.copyright {
+.row {
+    margin-left: 0;
+}
+
+.copy {
+    margin-top: 1rem;
+}
+
+.redesSociais {
     display: flex;
-    position: relative;
-    left: 35rem;
-    opacity: 0.7;
-    font-size: 80%;
-}
+    align-content: space-between;
+}  
 
-.copyright p {
-    margin-top: 20%;
+.redes a { 
     font-size: 1rem;
-    font-weight: 600;
-}
-
-@media screen and (max-width: 1366px) {
-    .redesSociais {
-        display: flex;
-        position: relative;
-        left: 70%;
-    }  
-
-    .redes a { 
-        font-size: 200%;
-    }
-}
-
-@media screen and (min-width: 1367px) {
-    .redesSociais {
-        display: flex;
-        position: relative;
-        left: 80%;
-    }  
-
-    .redes a { 
-        font-size: 250%;
-    }
 }
 
 .redes {
-    margin: 5% 10%;
+    margin: 5% 5%;
     padding: 2%;
-}
+} 
 
 .redes i:hover{
     color: rgb(245, 112, 119);
