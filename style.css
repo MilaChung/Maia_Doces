@@ -217,21 +217,31 @@ html, body {
     color: white;
 }
 
-.row {
-    margin-left: 0;
-}
-
 .copy {
     margin-top: 1rem;
 }
 
 .redesSociais {
     display: flex;
-    align-content: space-between;
+    margin-right: 2%;
 }  
 
 .redes a { 
-    font-size: 1rem;
+    font-size: 2rem;
+}
+
+@media screen and (max-width: 580px) {
+    .redesSociais {
+        margin-right: 5%;
+    } 
+
+    .redes a { 
+        font-size: 1rem;
+    }   
+
+    .copy {
+        font-size: 0.5rem;
+    }
 }
 
 .redes {
