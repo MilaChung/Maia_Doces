@@ -29,11 +29,18 @@ html, body {
 @media screen and (max-width: 600px) {
     .nav {
         height: 6rem;
+        border-bottom-right-radius: 0.8rem;
+        border-bottom-left-radius:  0.8rem;
     } 
 
     .nav div.logo a {
         font-size: 2rem;
     } 
+
+    .foot {
+        border-top-right-radius: 0.8rem;
+        border-top-left-radius:  0.8rem;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -179,12 +186,12 @@ html, body {
     text-align: center;
 }
 
-#footer {
+.foot {
     bottom: 0;
     left: 0;
     right: 0;
-    border-top-left-radius: 1.5rem;
-    border-top-right-radius: 1.5rem;
+    border-top-left-radius: 1.2rem;
+    border-top-right-radius: 1.2rem;
     background-color: rgba(118, 203, 203, 0.3);
 }
 
